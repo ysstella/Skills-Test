@@ -1,20 +1,24 @@
-#include <iostream>
-#include <conio.h>
+#include<iostream>
+#include<conio.h>
 using namespace std;
-
 int main()
 {
-	double a, b ;
-	cout << " Please input your pay rate of an hour: " << endl;
-	cin >> a;
-	cout << " Please input your hour worked: " << endl;
-	cin >> b; 
-	cout <<"Gross income=" << a*b <<"$"<< endl;
-	cout <<"Net income after taxes=" << a*b-a*b*0.14 <<"$"<< endl;
-	cout <<"The money you spend on clothes and other accessories=" << (a*b-a*b*0.14)*0.1 <<"$"<< endl;
-	cout <<"The money you spend on school supplies=" << (a*b-a*b*0.14)*0.01 <<"$"<< endl;
-	cout <<"The money you spend to buy saving bonds=" << ((a*b-a*b*0.14)-((a*b-a*b*0.14)*0.1)-((a*b-a*b*0.14)*0.01))*0.25 <<"$"<< endl;
-	cout <<"The money your parents spend to buy additional saving bonds for you=" << (((a*b-a*b*0.14)-((a*b-a*b*0.14)*0.1)-((a*b-a*b*0.14)*0.01))*0.25)*0.5 <<"$"<< endl;
-_getch();
-return 0;
+	double PayRate, NumberHours;
+	cout << "Please enter your Pay rate per hour and Number of hours you worked each week: " << endl;
+	cin >> PayRate >> NumberHours;
+	cout << "Pay rate per hour: " << PayRate << endl;
+	cout << "Hours worked each week: " << NumberHours << endl;
+
+	cout << "Gross Income: " << (15.5*NumberHours) << endl;
+	cout << "Net Income: " << ((15.5*NumberHours)*.86) << endl;
+
+	cout << "Money you spend on clothes and other accessories: " << (((15.5*NumberHours)*.86)*.1) << endl;
+
+	cout << "Money you spend on school supplies: " << ((((15.5*NumberHours)*.86)*.9)*.01) << endl;
+
+	cout << "Money you spend to buy savings bonds: " << (((((15.5*NumberHours)*.86)*.9)*.99)*.25) << endl;
+
+	cout << "Money your parent spend to buy additional savings bonds for you: " << ((((((15.5*NumberHours)*.86)*.9)*.99)*.25)*0.5) << endl;
+	_getch();
+	return 0;
 }
